@@ -43,11 +43,12 @@ public class PlayerMobility : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetMouseButtonDown(1) && Time.time > NextAttack){
+			
 			NextAttack = Time.time + AttackRate - 0.5f;
 			anim.SetTrigger("Sword");
 		}
 		
-		if(weapon == "sword" && Input.GetMouseButtonDown(0) && Time.time > NextAttack){
+		if(Input.GetMouseButtonDown(0) ){
 			NextAttack = Time.time + AttackRate;
 		
 			var mousePosition = Camera.main.ScreenToWorldPoint (Input.mousePosition);

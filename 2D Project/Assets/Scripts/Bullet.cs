@@ -24,7 +24,9 @@ public class Bullet : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 
 		
-		if (other.name == "Player") {
+		if (other.name == "Player"){
+
+		}else if(other.name == "Bullet(Clone)") {
 			
 		}else{
 			Instantiate(explosion, other.transform.position, Quaternion.identity);
