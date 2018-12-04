@@ -30,7 +30,6 @@ public class Bullet : MonoBehaviour {
 			Instantiate(explosion, other.transform.position, Quaternion.identity);
 			Destroy(this.gameObject);
 			Destroy (other.gameObject);
-			Debug.Log("ouch");
 		}
 		
 	}
